@@ -1,0 +1,19 @@
+{
+  "name": "gameoflife",
+  "version": "1.0.0",
+  "description": "Game of Life (Conway, not Milton Bradley) in ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smashzen/gameoflife.git"
+  },
+  "author": "Doug Riblet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smashzen/gameoflife/issues"
+  },
+  "homepage": "https://github.com/smashzen/gameoflife#readme"
+}
