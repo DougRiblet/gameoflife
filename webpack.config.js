@@ -2,13 +2,13 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './client/index.js',
+  entry: './client/index.jsx',
   output: {
     path: path.join(__dirname, '/client/public'),
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['', '.js', '.jsx']
   },
   stats: {
     colors: true,
