@@ -4,6 +4,7 @@
   "description": "Game of Life (Conway, not Milton Bradley) in ReactJS",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "standard"
   },
   "repository": {
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "standard": "^8.5.0",
