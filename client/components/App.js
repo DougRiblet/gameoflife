@@ -13,16 +13,16 @@ export default class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <div id="header">
+        <div id='header'>
           <Header />
         </div>
-        <div id="board">
+        <div id='board'>
           <Board />
         </div>
-        <div id="controls">
+        <div id='controls'>
           <Controls />
         </div>
-        <div id="footer">
+        <div id='footer'>
           <Footer />
         </div>
       </div>
