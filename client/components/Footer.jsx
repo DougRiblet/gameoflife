@@ -9,7 +9,9 @@ export default class Footer extends React.Component {
   render () {
     return (
       <div>
-        footer
+        <p>
+          Created by Doug Riblet | <a href='https://github.com/smashzen'>github.com/smashzen</a>
+        </p>
       </div>
     )
   }

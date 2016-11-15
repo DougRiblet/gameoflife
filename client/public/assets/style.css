@@ -1,6 +1,5 @@
 body {
   background-color: #fffbf8;
-  color: #333;
 }
 
 #app {
@@ -9,5 +8,23 @@ body {
 }
 
 #header {
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #666;
+  margin-bottom: 20px;
+}
+
+#header h2 {
+  color: #666;
+  font-family: Tahoma, Geneva, sans-serif;
+  margin: 8px 0px;
+}
+
+#footer {
+  border-top: 2px solid #666;
+  margin-top: 20px;
+}
+
+#footer p {
+  color: #666;
+  font-family: Tahoma, Geneva, sans-serif;
+  margin: 8px 0px;
 }
