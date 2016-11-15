@@ -4,6 +4,7 @@
   "description": "Game of Life (Conway, not Milton Bradley)",
   "main": "client/public/index.jsx",
   "scripts": {
+    "start": "nodemon ./server/app.js",
     "build": "webpack",
     "test": "standard"
   },

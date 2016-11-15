@@ -6,8 +6,10 @@ var port = process.env.PORT || 7070
 
 // ENDPOINTS
 
+app.use(express.static(path.join(__dirname, "../client/public")));
+
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '/index.html'))
+  res.sendFile(path.join(__dirname, '../client/public/index.html'))
 })
 
 app.get('/favicon.ico', function (req, res) {

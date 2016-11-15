@@ -9,7 +9,7 @@ export default class Header extends React.Component {
   render () {
     return (
       <div>
-        header
+        <h2>Conway's Game of Life</h2>
       </div>
     )
   }
