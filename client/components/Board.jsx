@@ -8,9 +8,9 @@ export default class Board extends React.Component {
 
   render () {
     return (
-      <div>
-        board
-      </div>
+      <svg width='800' height='400'>
+        <rect width='800' height='400' fill='papayawhip' />
+      </svg>
     )
   }
 
