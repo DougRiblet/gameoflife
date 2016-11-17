@@ -6,21 +6,22 @@ export default class Board extends React.Component {
     this.state = {
       grid: Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2))
     }
+    this.redrawBoard = this.redrawBoard.bind(this)
   }
 
   redrawBoard () {
-    let newgrid = this.grid.map((row, y) => {
+    let newgrid = this.state.grid.map((row, y) => {
       return row.map((dot, x) => {
         let nearby = []
-        nearby.push(this.grid[(y - 1) % 40][(x - 1) % 80])
-        nearby.push(this.grid[(y - 1) % 40][x])
-        nearby.push(this.grid[(y - 1) % 40][(x + 1) % 80])
-        nearby.push(this.grid[y][(x - 1) % 80])
-        nearby.push(this.grid[y][(x + 1) % 80])
-        nearby.push(this.grid[(y + 1) % 40][(x - 1) % 80])
-        nearby.push(this.grid[(y + 1) % 40][x])
-        nearby.push(this.grid[(y + 1) % 40][(x + 1) % 80])
-        let nearcount = nearby.filter(i => true).length
+        nearby.push(this.state.grid[(y + 39) % 40][(x + 79) % 80])
+        nearby.push(this.state.grid[(y + 39) % 40][x])
+        nearby.push(this.state.grid[(y + 39) % 40][(x + 1) % 80])
+        nearby.push(this.state.grid[y][(x + 79) % 80])
+        nearby.push(this.state.grid[y][(x + 1) % 80])
+        nearby.push(this.state.grid[(y + 1) % 40][(x + 79) % 80])
+        nearby.push(this.state.grid[(y + 1) % 40][x])
+        nearby.push(this.state.grid[(y + 1) % 40][(x + 1) % 80])
+        let nearcount = nearby.filter(i => i === true).length
         if (nearcount === 3 || (dot && nearcount === 2)) {
           return true
         } else {
@@ -47,6 +48,7 @@ export default class Board extends React.Component {
             })
           }
         </svg>
+        <button className='redrawButton' onClick={this.redrawBoard} >Step</button>
       </div>
     )
   }
