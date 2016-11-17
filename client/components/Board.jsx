@@ -52,10 +52,12 @@ export default class Board extends React.Component {
       <svg width='800' height='400'>
         <rect width='800' height='400' fill='papayawhip' />
         {
-          this.state.grid.map(function(row, y){
-            return row.map(function(dot, x){
+          this.state.grid.map((row, y) => {
+            return row.map((dot, x) => {
+              let oxo = 'on' + String(dot)
+              console.log('oxo: ', oxo)
               return (
-                <circle cx={x*10+5} cy={y*10+5} r='4' fill='peru' />
+                <circle className={oxo} cx={x * 10 + 5} cy={y * 10 + 5} r='4' />
               )
             })
           })
