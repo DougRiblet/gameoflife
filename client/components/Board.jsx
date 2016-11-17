@@ -6,10 +6,22 @@ export default class Board extends React.Component {
     this.state = {
       grid: Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2))
     }
-    this.redrawBoard = this.redrawBoard.bind(this)
+    this.generateRandomBoard = this.generateRandomBoard.bind(this)
+    this.clearBoard = this.clearBoard.bind(this)
+    this.stepForward = this.stepForward.bind(this)
   }
 
-  redrawBoard () {
+  generateRandomBoard () {
+    let newrandom = Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2))
+    this.setState({grid: newrandom})
+  }
+
+  clearBoard () {
+    let emptyBoard = Array(40).fill(Array(80).fill(false))
+    this.setState({grid: emptyBoard})
+  }
+
+  stepForward () {
     let newgrid = this.state.grid.map((row, y) => {
       return row.map((dot, x) => {
         let nearby = []
@@ -48,7 +60,11 @@ export default class Board extends React.Component {
             })
           }
         </svg>
-        <button className='redrawButton' onClick={this.redrawBoard} >Step</button>
+        <div id='ctbar'>
+          <button onClick={this.generateRandomBoard} >New Board</button>
+          <button onClick={this.clearBoard} >Clear Board</button>
+          <button onClick={this.stepForward} >Step Forward</button>
+        </div>
       </div>
     )
   }

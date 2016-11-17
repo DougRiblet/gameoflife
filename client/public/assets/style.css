@@ -18,6 +18,23 @@ body {
   margin: 8px 0px;
 }
 
+#ctbar {
+  margin: 25px 0px;
+}
+
+#ctbar button {
+  height: 40px;
+  width: 150px;
+  padding: auto auto;
+  margin-right: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: papayawhip;
+  color: #666;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 18px;
+}
+
 #footer {
   border-top: 2px solid #666;
   margin-top: 20px;
