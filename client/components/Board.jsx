@@ -1,4 +1,5 @@
 import React from 'react'
+import Controls from './Controls'
 
 export default class Board extends React.Component {
   constructor (props) {
@@ -60,11 +61,11 @@ export default class Board extends React.Component {
             })
           }
         </svg>
-        <div id='ctbar'>
-          <button onClick={this.generateRandomBoard} >New Board</button>
-          <button onClick={this.clearBoard} >Clear Board</button>
-          <button onClick={this.stepForward} >Step Forward</button>
-        </div>
+        <Controls
+          generateRandomBoard={() => this.generateRandomBoard()}
+          clearBoard={() => this.clearBoard()}
+          stepForward={() => this.stepForward()}
+        />
       </div>
     )
   }
