@@ -35,6 +35,13 @@ body {
   font-size: 18px;
 }
 
+#generations {
+  margin: 16px 0px;
+  color: #666;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 24px;
+}
+
 #footer {
   border-top: 2px solid #666;
   margin-top: 20px;

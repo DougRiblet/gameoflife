@@ -5,7 +5,8 @@ export default class Board extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      grid: Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2))
+      grid: Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2)),
+      generation: 0
     }
     this.generateRandomBoard = this.generateRandomBoard.bind(this)
     this.clearBoard = this.clearBoard.bind(this)
@@ -14,12 +15,12 @@ export default class Board extends React.Component {
 
   generateRandomBoard () {
     let newrandom = Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2))
-    this.setState({grid: newrandom})
+    this.setState({grid: newrandom, generation: 0})
   }
 
   clearBoard () {
     let emptyBoard = Array(40).fill(Array(80).fill(false))
-    this.setState({grid: emptyBoard})
+    this.setState({grid: emptyBoard, generation: 0})
   }
 
   stepForward () {
@@ -42,7 +43,7 @@ export default class Board extends React.Component {
         }
       })
     })
-    this.setState({grid: newgrid})
+    this.setState({grid: newgrid, generation: this.state.generation + 1})
   }
 
   render () {
@@ -65,6 +66,7 @@ export default class Board extends React.Component {
           generateRandomBoard={() => this.generateRandomBoard()}
           clearBoard={() => this.clearBoard()}
           stepForward={() => this.stepForward()}
+          generation={this.state.generation}
         />
       </div>
     )
