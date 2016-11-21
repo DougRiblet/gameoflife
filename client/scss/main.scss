@@ -53,10 +53,10 @@ body {
 }
 
 circle {
-  .ontrue {
+  &.ontrue {
     fill: forestgreen;
   }
-  .onfalse {
+  &.onfalse {
     fill: #F2DFC2;
   }
 }

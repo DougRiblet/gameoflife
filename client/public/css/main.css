@@ -41,8 +41,8 @@ body {
     font-family: Tahoma, Geneva, sans-serif;
     margin: 8px 0px; }
 
-circle .ontrue {
+circle.ontrue {
   fill: forestgreen; }
 
-circle .onfalse {
+circle.onfalse {
   fill: #F2DFC2; }
