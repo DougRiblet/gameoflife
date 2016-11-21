@@ -1,4 +1,6 @@
 $boardwidth: 802px;
+$boardheight: 402px;
+$gray: #666;
 
 body {
   background-color: #fffbf8;
@@ -10,12 +12,22 @@ body {
 }
 
 #header {
-  border-bottom: 2px solid #666;
+  border-bottom: 2px solid $gray;
   margin-bottom: 20px;
   h2 {
-    color: #666;
+    color: $gray;
     font-family: Tahoma, Geneva, sans-serif;
     margin: 8px 0px;
+  }
+}
+
+svg {
+  width: $boardwidth;
+  height: $boardheight;
+  rect {
+    width: $boardwidth;
+    height: $boardheight;
+    fill: papayawhip;
   }
 }
 
@@ -29,7 +41,7 @@ body {
     border: none;
     border-radius: 5px;
     background-color: papayawhip;
-    color: #666;
+    color: $gray;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 18px;
   }
@@ -37,16 +49,16 @@ body {
 
 #generations {
   margin: 16px 0px;
-  color: #666;
+  color: $gray;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 24px;
 }
 
 #footer {
-  border-top: 2px solid #666;
+  border-top: 2px solid $gray;
   margin-top: 20px;
   p {
-    color: #666;
+    color: $gray;
     font-family: Tahoma, Geneva, sans-serif;
     margin: 8px 0px;
   }

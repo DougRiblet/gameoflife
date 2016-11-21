@@ -13,6 +13,14 @@ body {
     font-family: Tahoma, Geneva, sans-serif;
     margin: 8px 0px; }
 
+svg {
+  width: 802px;
+  height: 402px; }
+  svg rect {
+    width: 802px;
+    height: 402px;
+    fill: papayawhip; }
+
 #ctbar {
   margin: 25px 0px; }
   #ctbar button {

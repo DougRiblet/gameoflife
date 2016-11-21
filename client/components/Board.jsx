@@ -49,8 +49,8 @@ export default class Board extends React.Component {
   render () {
     return (
       <div>
-        <svg width='802' height='402'>
-          <rect width='802' height='402' fill='papayawhip' />
+        <svg>
+          <rect />
           {
             this.state.grid.map((row, y) => {
               return row.map((dot, x) => {
