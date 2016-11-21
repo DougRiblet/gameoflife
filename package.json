@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon ./server/app.js",
     "build": "webpack --watch",
-    "test": "standard"
+    "test": "standard",
+    "build-css": "node-sass client/scss/main.scss client/public/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "babel-loader": "^6.2.7",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
+    "node-sass": "^3.13.0",
     "standard": "^8.5.0",
     "webpack": "^1.13.3"
   }
