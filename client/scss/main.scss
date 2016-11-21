@@ -1,5 +1,62 @@
-$samplered: #b51525;
-body { 
-  margin: 0; 
-  background-color: $samplered; 
+$boardwidth: 802px;
+
+body {
+  background-color: #fffbf8;
+}
+
+#app {
+  width: $boardwidth;
+  margin: 20px auto;
+}
+
+#header {
+  border-bottom: 2px solid #666;
+  margin-bottom: 20px;
+  h2 {
+    color: #666;
+    font-family: Tahoma, Geneva, sans-serif;
+    margin: 8px 0px;
+  }
+}
+
+#ctbar {
+  margin: 25px 0px;
+  button {
+    height: 40px;
+    width: 150px;
+    padding: auto auto;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: papayawhip;
+    color: #666;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+  }
+}
+
+#generations {
+  margin: 16px 0px;
+  color: #666;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 24px;
+}
+
+#footer {
+  border-top: 2px solid #666;
+  margin-top: 20px;
+  p {
+    color: #666;
+    font-family: Tahoma, Geneva, sans-serif;
+    margin: 8px 0px;
+  }
+}
+
+circle {
+  .ontrue {
+    fill: forestgreen;
+  }
+  .onfalse {
+    fill: #F2DFC2;
+  }
 }
