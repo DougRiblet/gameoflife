@@ -40,26 +40,24 @@ svg {
 }
 
 #ctbar {
-  margin: 25px 0px;
+  margin: 15px 0px;
   button {
-    height: 40px;
-    width: 150px;
+    height: 30px;
+    width: 120px;
     padding: auto auto;
-    margin-right: 20px;
+    margin-right: 15px;
     border: none;
     border-radius: 5px;
     background-color: papayawhip;
     color: $gray;
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
   }
-}
-
-#generations {
-  margin: 16px 0px;
-  color: $gray;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 24px;
+  #generations {
+    color: $gray;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+  }
 }
 
 #footer {

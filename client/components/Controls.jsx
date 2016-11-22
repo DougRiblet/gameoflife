@@ -12,9 +12,11 @@ export default class Controls extends React.Component {
         <button onClick={this.props.generateRandomBoard} >New Board</button>
         <button onClick={this.props.clearBoard} >Clear Board</button>
         <button onClick={this.props.stepForward} >Step Forward</button>
-        <p id='generations'>
-          Generations: {this.props.generation}
-        </p>
+        <button onClick={this.props.startGens} >Start Gens</button>
+        <button onClick={this.props.pauseGens} >Pause Gens</button>
+        <span id='generations'>
+          Gen: {this.props.generation}
+        </span>
       </div>
     )
   }

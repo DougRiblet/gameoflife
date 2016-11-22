@@ -26,24 +26,22 @@ svg {
     fill: #F2DFC2; }
 
 #ctbar {
-  margin: 25px 0px; }
+  margin: 15px 0px; }
   #ctbar button {
-    height: 40px;
-    width: 150px;
+    height: 30px;
+    width: 120px;
     padding: auto auto;
-    margin-right: 20px;
+    margin-right: 15px;
     border: none;
     border-radius: 5px;
     background-color: papayawhip;
     color: #666;
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 18px; }
-
-#generations {
-  margin: 16px 0px;
-  color: #666;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 24px; }
+    font-size: 16px; }
+  #ctbar #generations {
+    color: #666;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px; }
 
 #footer {
   border-top: 2px solid #666;

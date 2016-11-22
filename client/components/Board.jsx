@@ -11,6 +11,8 @@ export default class Board extends React.Component {
     this.generateRandomBoard = this.generateRandomBoard.bind(this)
     this.clearBoard = this.clearBoard.bind(this)
     this.stepForward = this.stepForward.bind(this)
+    this.startGens = this.startGens.bind(this)
+    this.pauseGens = this.pauseGens.bind(this)
   }
 
   generateRandomBoard () {
@@ -46,6 +48,15 @@ export default class Board extends React.Component {
     this.setState({grid: newgrid, generation: this.state.generation + 1})
   }
 
+  startGens () {
+    var interval = setInterval(this.stepForward, 250)
+    this.setState({interval: interval})
+  }
+
+  pauseGens () {
+    clearInterval(this.state.interval)
+  }
+
   render () {
     return (
       <div>
@@ -66,6 +77,8 @@ export default class Board extends React.Component {
           generateRandomBoard={() => this.generateRandomBoard()}
           clearBoard={() => this.clearBoard()}
           stepForward={() => this.stepForward()}
+          startGens={() => this.startGens()}
+          pauseGens={() => this.pauseGens()}
           generation={this.state.generation}
         />
       </div>
