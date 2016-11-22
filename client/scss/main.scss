@@ -29,6 +29,14 @@ svg {
     height: $boardheight;
     fill: papayawhip;
   }
+  circle {
+    &.ontrue {
+      fill: forestgreen;
+    }
+    &.onfalse {
+      fill: #F2DFC2;
+    }
+  }
 }
 
 #ctbar {
@@ -61,14 +69,5 @@ svg {
     color: $gray;
     font-family: Tahoma, Geneva, sans-serif;
     margin: 8px 0px;
-  }
-}
-
-circle {
-  &.ontrue {
-    fill: forestgreen;
-  }
-  &.onfalse {
-    fill: #F2DFC2;
   }
 }

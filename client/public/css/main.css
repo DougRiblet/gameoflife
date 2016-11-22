@@ -20,6 +20,10 @@ svg {
     width: 802px;
     height: 402px;
     fill: papayawhip; }
+  svg circle.ontrue {
+    fill: forestgreen; }
+  svg circle.onfalse {
+    fill: #F2DFC2; }
 
 #ctbar {
   margin: 25px 0px; }
@@ -48,9 +52,3 @@ svg {
     color: #666;
     font-family: Tahoma, Geneva, sans-serif;
     margin: 8px 0px; }
-
-circle.ontrue {
-  fill: forestgreen; }
-
-circle.onfalse {
-  fill: #F2DFC2; }
