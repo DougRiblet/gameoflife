@@ -57,6 +57,14 @@ export default class Board extends React.Component {
     clearInterval(this.state.interval)
   }
 
+  componentDidMount () {
+    this.startGens()
+  }
+
+  componentWillUnmount () {
+    this.pauseGens()
+  }
+
   render () {
     return (
       <div>
