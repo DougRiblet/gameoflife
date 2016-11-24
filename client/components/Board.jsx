@@ -6,13 +6,15 @@ export default class Board extends React.Component {
     super(props)
     this.state = {
       grid: Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2)),
-      generation: 0
+      generation: 0,
+      allow_toggle: false
     }
     this.generateRandomBoard = this.generateRandomBoard.bind(this)
     this.clearBoard = this.clearBoard.bind(this)
     this.stepForward = this.stepForward.bind(this)
     this.startGens = this.startGens.bind(this)
     this.pauseGens = this.pauseGens.bind(this)
+    this.toggleCell = this.toggleCell.bind(this)
   }
 
   generateRandomBoard () {
@@ -50,11 +52,28 @@ export default class Board extends React.Component {
 
   startGens () {
     var interval = setInterval(this.stepForward, 250)
-    this.setState({interval: interval})
+    this.setState({interval: interval, allow_toggle: false})
   }
 
   pauseGens () {
     clearInterval(this.state.interval)
+    this.setState({allow_toggle: true})
+  }
+
+  toggleCell (togx, togy) {
+    if (this.state.allow_toggle) {
+      let toggrid = this.state.grid.map((row, y) => {
+        return row.map((dot, x) => {
+          console.log('dot: ', dot, !dot)
+          if (x === togx && y === togy) {
+            return !dot
+          } else {
+            return dot
+          }
+        })
+      })
+      this.setState({grid: toggrid})
+    }
   }
 
   componentDidMount () {
@@ -75,7 +94,11 @@ export default class Board extends React.Component {
               return row.map((dot, x) => {
                 let oxo = 'on' + String(dot)
                 return (
-                  <circle className={oxo} cx={x * 10 + 6} cy={y * 10 + 6} r='4' />
+                  <circle
+                    className={oxo}
+                    cx={x * 10 + 6} cy={y * 10 + 6} r='4'
+                    onClick={() => this.toggleCell(x, y)}
+                  />
                 )
               })
             })
