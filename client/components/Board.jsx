@@ -1,4 +1,5 @@
 import React from 'react'
+import update from 'immutability-helper'
 import Controls from './Controls'
 
 export default class Board extends React.Component {
@@ -62,15 +63,10 @@ export default class Board extends React.Component {
 
   toggleCell (togx, togy) {
     if (this.state.allow_toggle) {
-      let toggrid = this.state.grid.map((row, y) => {
-        return row.map((dot, x) => {
-          console.log('dot: ', dot, !dot)
-          if (x === togx && y === togy) {
-            return !dot
-          } else {
-            return dot
-          }
-        })
+      let toggrid = update(this.state.grid, {
+        [togy]: {
+          [togx]: {$apply: function (x) { return !x }}
+        }
       })
       this.setState({grid: toggrid})
     }
