@@ -6,7 +6,7 @@ export default class Board extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      grid: Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2)),
+      grid: Array.from({length: 60}, () => Array.from({length: 100}, () => Math.random() < 0.2)),
       generation: 0,
       allow_toggle: false
     }
@@ -19,12 +19,12 @@ export default class Board extends React.Component {
   }
 
   generateRandomBoard () {
-    let newrandom = Array.from({length: 40}, () => Array.from({length: 80}, () => Math.random() < 0.2))
+    let newrandom = Array.from({length: 60}, () => Array.from({length: 100}, () => Math.random() < 0.2))
     this.setState({grid: newrandom, generation: 0})
   }
 
   clearBoard () {
-    let emptyBoard = Array(40).fill(Array(80).fill(false))
+    let emptyBoard = Array(60).fill(Array(100).fill(false))
     this.setState({grid: emptyBoard, generation: 0})
   }
 
@@ -32,14 +32,14 @@ export default class Board extends React.Component {
     let newgrid = this.state.grid.map((row, y) => {
       return row.map((dot, x) => {
         let nearby = []
-        nearby.push(this.state.grid[(y + 39) % 40][(x + 79) % 80])
-        nearby.push(this.state.grid[(y + 39) % 40][x])
-        nearby.push(this.state.grid[(y + 39) % 40][(x + 1) % 80])
-        nearby.push(this.state.grid[y][(x + 79) % 80])
-        nearby.push(this.state.grid[y][(x + 1) % 80])
-        nearby.push(this.state.grid[(y + 1) % 40][(x + 79) % 80])
-        nearby.push(this.state.grid[(y + 1) % 40][x])
-        nearby.push(this.state.grid[(y + 1) % 40][(x + 1) % 80])
+        nearby.push(this.state.grid[(y + 59) % 60][(x + 99) % 100])
+        nearby.push(this.state.grid[(y + 59) % 60][x])
+        nearby.push(this.state.grid[(y + 59) % 60][(x + 1) % 100])
+        nearby.push(this.state.grid[y][(x + 99) % 100])
+        nearby.push(this.state.grid[y][(x + 1) % 100])
+        nearby.push(this.state.grid[(y + 1) % 60][(x + 99) % 100])
+        nearby.push(this.state.grid[(y + 1) % 60][x])
+        nearby.push(this.state.grid[(y + 1) % 60][(x + 1) % 100])
         let nearcount = nearby.filter(i => i === true).length
         if (nearcount === 3 || (dot && nearcount === 2)) {
           return true

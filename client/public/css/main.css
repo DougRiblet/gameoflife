@@ -2,7 +2,7 @@ body {
   background-color: #fffbf8; }
 
 #app {
-  width: 802px;
+  width: 1002px;
   margin: 20px auto; }
 
 #header {
@@ -14,11 +14,11 @@ body {
     margin: 8px 0px; }
 
 svg {
-  width: 802px;
-  height: 402px; }
+  width: 1002px;
+  height: 602px; }
   svg rect {
-    width: 802px;
-    height: 402px;
+    width: 1002px;
+    height: 602px;
     fill: papayawhip; }
   svg circle.ontrue {
     fill: forestgreen; }
