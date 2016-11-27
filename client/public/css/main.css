@@ -49,6 +49,12 @@ svg {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 16px; }
 
+#history {
+  width: 650px;
+  margin: 40px auto;
+  color: #666;
+  font-family: Tahoma, Geneva, sans-serif; }
+
 #footer {
   border-top: 2px solid #666;
   margin-top: 20px; }
