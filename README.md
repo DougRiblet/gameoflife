@@ -12,3 +12,4 @@ Background: <http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>
 
 Challenge: <https://www.freecodecamp.com/challenges/build-the-game-of-life>
 
+Deep Dive: <http://www.conwaylife.com/wiki/Main_Page>
