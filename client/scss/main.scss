@@ -4,6 +4,7 @@ $gray: #666;
 $tanlight: papayawhip;
 $tandark: #F2DFC2;
 $green: forestgreen;
+$horizontal: 2px solid $gray;
 
 body {
   background-color: #fffbf8;
@@ -15,7 +16,7 @@ body {
 }
 
 #header {
-  border-bottom: 2px solid $gray;
+  border-bottom: $horizontal;
   margin-bottom: 20px;
   h2 {
     color: $gray;
@@ -43,7 +44,9 @@ svg {
 }
 
 #ctbar {
-  margin: 15px 0px;
+  margin: 20px 0px;
+  border-top: $horizontal;
+  padding-top: 12px;
   button {
     height: 24px;
     width: 120px;
@@ -69,7 +72,7 @@ svg {
 }
 
 #footer {
-  border-top: 2px solid $gray;
+  border-top: $horizontal;
   margin-top: 20px;
   p {
     color: $gray;

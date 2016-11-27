@@ -26,7 +26,9 @@ svg {
     fill: #F2DFC2; }
 
 #ctbar {
-  margin: 15px 0px; }
+  margin: 20px 0px;
+  border-top: 2px solid #666;
+  padding-top: 12px; }
   #ctbar button {
     height: 24px;
     width: 120px;
