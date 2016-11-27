@@ -28,16 +28,20 @@ svg {
 #ctbar {
   margin: 15px 0px; }
   #ctbar button {
-    height: 30px;
+    height: 24px;
     width: 120px;
     padding: auto auto;
     margin-right: 15px;
     border: none;
     border-radius: 5px;
-    background-color: papayawhip;
+    background-color: #F2DFC2;
     color: #666;
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 16px; }
+    font-size: 12px; }
+    #ctbar button:hover {
+      background-color: forestgreen;
+      color: papayawhip;
+      cursor: pointer; }
   #ctbar #generations {
     color: #666;
     font-family: Tahoma, Geneva, sans-serif;

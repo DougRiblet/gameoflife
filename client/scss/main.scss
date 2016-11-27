@@ -1,6 +1,9 @@
 $boardwidth: 802px;
 $boardheight: 402px;
 $gray: #666;
+$tanlight: papayawhip;
+$tandark: #F2DFC2;
+$green: forestgreen;
 
 body {
   background-color: #fffbf8;
@@ -27,14 +30,14 @@ svg {
   rect {
     width: $boardwidth;
     height: $boardheight;
-    fill: papayawhip;
+    fill: $tanlight;
   }
   circle {
     &.ontrue {
-      fill: forestgreen;
+      fill: $green;
     }
     &.onfalse {
-      fill: #F2DFC2;
+      fill: $tandark;
     }
   }
 }
@@ -42,16 +45,21 @@ svg {
 #ctbar {
   margin: 15px 0px;
   button {
-    height: 30px;
+    height: 24px;
     width: 120px;
     padding: auto auto;
     margin-right: 15px;
     border: none;
     border-radius: 5px;
-    background-color: papayawhip;
+    background-color: $tandark;
     color: $gray;
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 16px;
+    font-size: 12px;
+    &:hover {
+      background-color: $green;
+      color: $tanlight;
+      cursor: pointer;
+    }
   }
   #generations {
     color: $gray;
