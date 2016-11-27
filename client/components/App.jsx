@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Board from './Board'
+import History from './History'
 import Footer from './Footer'
 
 export default class App extends React.Component {
@@ -17,6 +18,9 @@ export default class App extends React.Component {
         </div>
         <div id='board'>
           <Board />
+        </div>
+        <div id='history'>
+          <History />
         </div>
         <div id='footer'>
           <Footer />
