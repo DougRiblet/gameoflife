@@ -34,6 +34,7 @@ export default class Board extends React.Component {
     gggArray.forEach(function(p){
       gggBoard[p[0], p[1]] = true
     })
+    this.setState({grid: gggBoard, generation: 0})
   }
 
   stepForward () {
