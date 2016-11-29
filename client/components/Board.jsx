@@ -16,6 +16,7 @@ export default class Board extends React.Component {
     this.startGens = this.startGens.bind(this)
     this.pauseGens = this.pauseGens.bind(this)
     this.toggleCell = this.toggleCell.bind(this)
+    this.generateGGG = this.generateGGG.bind(this)
   }
 
   generateRandomBoard () {
@@ -116,6 +117,7 @@ export default class Board extends React.Component {
           stepForward={() => this.stepForward()}
           startGens={() => this.startGens()}
           pauseGens={() => this.pauseGens()}
+          generateGGG={() => this.generateGGG()}
           generation={this.state.generation}
         />
       </div>

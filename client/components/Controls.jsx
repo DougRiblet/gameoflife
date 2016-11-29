@@ -11,6 +11,7 @@ export default class Controls extends React.Component {
       <div id='ctbar'>
         <button onClick={this.props.generateRandomBoard} >New Board</button>
         <button onClick={this.props.clearBoard} >Clear Board</button>
+        <button onClick={this.props.generateGGG} >Pattern GGG</button>
         <button onClick={this.props.stepForward} >Step Forward</button>
         <button onClick={this.props.startGens} >Start Gens</button>
         <button onClick={this.props.pauseGens} >Pause Gens</button>
