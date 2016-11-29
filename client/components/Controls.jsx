@@ -9,12 +9,13 @@ export default class Controls extends React.Component {
   render () {
     return (
       <div id='ctbar'>
-        <button onClick={this.props.generateRandomBoard} >New Board</button>
-        <button onClick={this.props.clearBoard} >Clear Board</button>
-        <button onClick={this.props.generateGGG} >Pattern GGG</button>
-        <button onClick={this.props.stepForward} >Step Forward</button>
-        <button onClick={this.props.startGens} >Start Gens</button>
-        <button onClick={this.props.pauseGens} >Pause Gens</button>
+        <button onClick={this.props.generateRandomBoard} >Random</button>
+        <button onClick={this.props.clearBoard} >Clear</button>
+        <button onClick={this.props.generateGGG} >GGG</button>
+        <button onClick={this.props.generateGGG} >Acorn</button>
+        <button onClick={this.props.stepForward} >Step</button>
+        <button onClick={this.props.startGens} >Start</button>
+        <button onClick={this.props.pauseGens} >Pause</button>
         <span id='generations'>
           Gen: {this.props.generation}
         </span>

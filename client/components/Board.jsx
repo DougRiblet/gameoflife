@@ -16,6 +16,7 @@ export default class Board extends React.Component {
     this.startGens = this.startGens.bind(this)
     this.pauseGens = this.pauseGens.bind(this)
     this.toggleCell = this.toggleCell.bind(this)
+    this.generateAcorn = this.generateAcorn.bind(this)
     this.generateGGG = this.generateGGG.bind(this)
   }
 
@@ -36,6 +37,15 @@ export default class Board extends React.Component {
       gggBoard[p[0]][p[1]] = true
     })
     this.setState({grid: gggBoard, generation: 0})
+  }
+
+  generateAcorn () {
+    let acornBoard = Array.from({length: 60}, () => Array.from({length: 100}, () => false))
+    let acornArray = [[10, 12], [10, 13], [10, 16], [10, 17], [10, 18], [8, 13], [9, 15]]
+    acornArray.forEach(function (p) {
+      acornBoard[p[0]][p[1]] = true
+    })
+    this.setState({grid: acornBoard, generation: 0})
   }
 
   stepForward () {
@@ -116,6 +126,7 @@ export default class Board extends React.Component {
           stepForward={() => this.stepForward()}
           startGens={() => this.startGens()}
           pauseGens={() => this.pauseGens()}
+          generateAcorn={() => this.generateAcorn()}
           generateGGG={() => this.generateGGG()}
           generation={this.state.generation}
         />
