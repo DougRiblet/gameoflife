@@ -28,6 +28,14 @@ export default class Board extends React.Component {
     this.setState({grid: emptyBoard, generation: 0})
   }
 
+  generateGGG () {
+    let gggBoard = Array(60).fill(Array(100).fill(false))
+    let gggArray = [[10,12], [10,13], [11,12], [11,13], [10,22], [11,22], [12,22], [9,23], [13,23], [8,24], [8,25], [14,24], [14,25], [11,26], [13,27], [9,27], [10,28], [11,28], [12,28], [11,29], [8,32], [8,33], [9,32], [9,33], [10,32], [10,33], [7,34], [11,34], [7,36], [11,36], [6,36], [12,36], [8,46], [8,47], [9,46], [9,47]]
+    gggArray.forEach(function(p){
+      gggBoard[p[0], p[1]] = true
+    })
+  }
+
   stepForward () {
     let newgrid = this.state.grid.map((row, y) => {
       return row.map((dot, x) => {
@@ -63,6 +71,7 @@ export default class Board extends React.Component {
 
   toggleCell (togx, togy) {
     if (this.state.allow_toggle) {
+      console.log("y-x: ", togy, togx)
       let toggrid = update(this.state.grid, {
         [togy]: {
           [togx]: {$apply: function (x) { return !x }}
