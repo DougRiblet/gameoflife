@@ -41,7 +41,7 @@ export default class Board extends React.Component {
 
   generateAcorn () {
     let acornBoard = Array.from({length: 60}, () => Array.from({length: 100}, () => false))
-    let acornArray = [[10, 12], [10, 13], [10, 16], [10, 17], [10, 18], [8, 13], [9, 15]]
+    let acornArray = [[30, 42], [30, 43], [30, 46], [30, 47], [30, 48], [28, 43], [29, 45]]
     acornArray.forEach(function (p) {
       acornBoard[p[0]][p[1]] = true
     })
