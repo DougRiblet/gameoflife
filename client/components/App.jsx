@@ -5,8 +5,8 @@ import History from './History'
 import Footer from './Footer'
 
 export default class App extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor () {
+    super()
     this.state = {}
   }
 
@@ -28,5 +28,4 @@ export default class App extends React.Component {
       </div>
     )
   }
-
 }
