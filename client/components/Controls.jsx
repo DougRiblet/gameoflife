@@ -22,5 +22,15 @@ export default class Controls extends React.Component {
       </div>
     )
   }
+}
 
+Controls.propTypes = {
+  generateRandomBoard: React.PropTypes.func.isRequired,
+  clearBoard: React.PropTypes.func.isRequired,
+  stepForward: React.PropTypes.func.isRequired,
+  startGens: React.PropTypes.func.isRequired,
+  pauseGens: React.PropTypes.func.isRequired,
+  generateAcorn: React.PropTypes.func.isRequired,
+  generateGGG: React.PropTypes.func.isRequired,
+  generation: React.PropTypes.number.isRequired
 }
