@@ -2,11 +2,11 @@
   "name": "gameoflife",
   "version": "1.0.0",
   "description": "Game of Life (Conway, not Milton Bradley)",
-  "main": "client/public/index.jsx",
+  "main": "client/index.jsx",
   "scripts": {
     "start": "nodemon ./server/app.js",
     "build": "webpack --watch",
-    "test": "standard",
+    "lint": "standard",
     "build-css": "node-sass client/scss/main.scss client/public/css/main.css"
   },
   "repository": {
