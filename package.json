@@ -28,11 +28,13 @@
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
+    "babel-jest": "^20.0.3",
     "babel-loader": "^6.2.7",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "jest": "^20.0.4",
     "node-sass": "^3.13.0",
+    "react-test-renderer": "^15.6.1",
     "standard": "^8.5.0",
     "webpack": "^1.13.3"
   }
